@@ -8,7 +8,11 @@
 
 <body>
     <div id="app">
-        <p> {{ message }} </p>
+        <p> {{ message }}</p>
+        <p v-text="message"></p>
+        <p v-pre>{{ message }}</p>
+        <a v-bind:href="url">WINGSプロジェクト</a>
+        <input type="button" value="click" v-bind:disabled="flag" />
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     </script>
