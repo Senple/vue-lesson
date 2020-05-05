@@ -13,6 +13,13 @@
         <p v-pre>{{ message }}</p>
         <a v-bind:href="url">WINGSプロジェクト</a>
         <input type="button" value="click" v-on:click="onclick" v-bind:disabled="flag" />
+        <div id="outer" v-on:mouseenter="onmousein" v-on:mouseleave="onmouseout">
+            外(outer)
+            <p id="inner">
+                内(inner)
+            </p>
+        </div>
+        <div v-html="result"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     </script>
