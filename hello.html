@@ -91,6 +91,11 @@
         <!-- 初回だけしか反映されない -->
         <div v-once>はじめまして {{ name }} さん。</div>
         <div>初めまして {{ name }} さん！</div>
+        <!-- P.123 イベントの既定の動作をキャンセルする。 -->
+        <div id="main" v-on:contextmenu.prevent>
+            この領域内では、コンテキストメニューは表示されません。
+        </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     </script>
