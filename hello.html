@@ -46,6 +46,12 @@
             <input type="checkbox" id="agree" v-model="agree" true-value="yes" false-value="no" />
         </form>
         <div> 回答： {{ agree }} </div>
+        <!-- P.79 バインドの動作オプションを設定する。 -->
+        <form>
+            <label for="temperature">サウナの温度</label>
+            <input type="text" id="temperature" v-model.number="temperature" v-on:change="onchange79" />
+        </form>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     </script>

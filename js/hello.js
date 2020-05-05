@@ -17,6 +17,8 @@ let app = new Vue({
         myName: "匿名",
         // P.70 チェックボックス 
         agree: true,
+        // P.79 バインドの動作オプションを設定する。
+        temperature: 0,
     },
     methods: {
         onclick: function () {
@@ -45,6 +47,12 @@ let app = new Vue({
         onclick65: function (message, e) {
             console.log(message);
             console.log(e);
+        },
+        // P.79 バインドの動作オプションを設定する。
+        onchange79: function () {
+            // 入力値を小数点第一位に丸めて、ログ表示
+            console.log(this.temperature.toFixed(1));
+            console.log(this.temperature.toFixed(2));
         }
     }
 })
