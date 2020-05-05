@@ -34,6 +34,18 @@
         <div>
             <button v-on:click="onclick65('ようこそ'), $event">クリック</button>
         </div>
+        <!-- P.67 双方向データバインティング -->
+        <form>
+            <label for="name">氏名：</label>
+            <input type="text" id="name" v-model="myName" />
+        </form>
+        <div>　こんにちは、{{ myName }} さん！</div>
+        <!-- P.70 チェックボックス -->
+        <form>
+            <label for="agree">同意する</label>
+            <input type="checkbox" id="agree" v-model="agree" true-value="yes" false-value="no" />
+        </form>
+        <div> 回答： {{ agree }} </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     </script>

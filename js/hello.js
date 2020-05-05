@@ -13,6 +13,10 @@ let app = new Vue({
         clientY: 0,
         offsetX: 0,
         offsetY: 0,
+        // P.67 双方向データバインティング
+        myName: "匿名",
+        // P.70 チェックボックス 
+        agree: true,
     },
     methods: {
         onclick: function () {
