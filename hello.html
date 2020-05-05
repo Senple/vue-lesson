@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <title>Vue.js</title>
+    <link rel="stylesheet" href="css/hello.css">
 </head>
 
 <body>
     <div id="app">
-        <p> {{ message }}</p>
+        <p id="bluefont" v-cloak> {{ message }}</p>
         <p v-text="message"></p>
         <p v-pre>{{ message }}</p>
         <a v-bind:href="url">WINGSプロジェクト</a>
