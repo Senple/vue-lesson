@@ -95,6 +95,12 @@
         <div id="main" v-on:contextmenu.prevent>
             この領域内では、コンテキストメニューは表示されません。
         </div>
+        <!-- P.125 送信動作でダイアログを表示して確認を求める。 -->
+        <form v-on:submit="onsubmit125">
+            <label fot="email">メールアドレス：</label>
+            <input id="email" name="email" type="email" />
+            <input type="submit" value="送信" />
+        </form>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>

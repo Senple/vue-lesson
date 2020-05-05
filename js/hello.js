@@ -76,7 +76,14 @@ let app = new Vue({
         onclick103: function () {
             Vue.set(this.list, 0, '茶パジャマ'); //赤→茶
             Vue.set(this.list, 1, '茶パジャマ'); //黄→茶
+        },
+        // P.125 送信動作でダイアログを表示して確認を求める。
+        onsubmit125: function () {
+            if (!confirm('送信していいですか？')) {
+                e.preventDefault();
+                return;
+            }
+        },
 
-        }
     }
 })
