@@ -75,6 +75,13 @@
             <div> {{ s.lyrics }} </div>
             <footer>{{ s.composer }} 作曲</footer>
         </template>
+        <!-- P.103 配列の変更を反映する。 -->
+        <form>
+            <input type="button" value="変更" @click="onclick103" />
+        </form>
+        <ul>
+            <li v-for="item in list">{{ item }}</li>
+        </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     </script>

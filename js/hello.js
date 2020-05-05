@@ -32,7 +32,9 @@ let app = new Vue({
                 lyrics: '春高楼の花の宴 巡る盃影さして...',
                 composer: '滝廉太郎'
             }
-        ]
+        ],
+        // P.103 配列の変更を反映する。
+        list: ['赤パジャマ', '黄パジャマ', '青パジャマ'],
     },
     methods: {
         onclick: function () {
@@ -67,6 +69,12 @@ let app = new Vue({
             // 入力値を小数点第一位に丸めて、ログ表示
             console.log(this.temperature.toFixed(1));
             console.log(this.temperature.toFixed(2));
+        },
+        // P.103 配列の変更を反映する。
+        onclick103: function () {
+            Vue.set(this.list, 0, '茶パジャマ'); //赤→茶
+            Vue.set(this.list, 1, '茶パジャマ'); //黄→茶
+
         }
     }
 })
