@@ -20,6 +20,12 @@
             </p>
         </div>
         <div v-html="result"></div>
+        <div id="main" v-on:mousemove="onmousemove">
+            screen: {{ screenX }} / {{ screenY }}<br />
+            page: {{ pageX }} / {{ pageY }}<br />
+            client: {{ clientX }} / {{ clientY }}<br />
+            offset: {{ offsetX }} / {{ offsetY }}<br />
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     </script>
