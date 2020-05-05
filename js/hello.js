@@ -21,6 +21,18 @@ let app = new Vue({
         temperature: 0,
         // P.87 制御関連のディレクティブ
         pay: "credit",
+        // P.101 v-forループによる注意点<template>要素
+        songs: [
+            {
+                title: '赤トンボ',
+                lyrics: '夕焼け小焼けの赤トンボ...',
+                composer: '山田耕作'
+            }, {
+                title: '荒城の月',
+                lyrics: '春高楼の花の宴 巡る盃影さして...',
+                composer: '滝廉太郎'
+            }
+        ]
     },
     methods: {
         onclick: function () {

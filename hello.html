@@ -69,6 +69,12 @@
                 <input type="text" key="bank" />
             </div>
         </fieldset>
+        <!-- P.101 v-forループによる注意点<template>要素 -->
+        <template v-for="s in songs">
+            <header> {{ s.title }} </header>
+            <div> {{ s.lyrics }} </div>
+            <footer>{{ s.composer }} 作曲</footer>
+        </template>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     </script>
