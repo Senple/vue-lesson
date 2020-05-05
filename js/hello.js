@@ -35,6 +35,8 @@ let app = new Vue({
         ],
         // P.103 配列の変更を反映する。
         list: ['赤パジャマ', '黄パジャマ', '青パジャマ'],
+        // P.114 値を一度だけバインドする。
+        name: "匿名",
     },
     methods: {
         onclick: function () {
