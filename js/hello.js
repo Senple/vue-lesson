@@ -3,7 +3,12 @@ let app = new Vue({
     data: {
         message: '皆さん、こんにちは！',
         url: 'https://wings.msn.to/',
-        flag: true,
+        flag: false,
 
+    },
+    methods: {
+        onclick: function () {
+            this.message = new Date().toLocaleString();
+        }
     }
 })
