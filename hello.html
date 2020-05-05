@@ -13,6 +13,8 @@
         <p v-pre>{{ message }}</p>
         <a v-bind:href="url">WINGSプロジェクト</a>
         <input type="button" value="click" v-on:click="onclick" v-bind:disabled="flag" />
+
+        <!-- p.58 mouse in/outの使い方 -->
         <div id="outer" v-on:mouseenter="onmousein" v-on:mouseleave="onmouseout">
             外(outer)
             <p id="inner">
@@ -20,11 +22,17 @@
             </p>
         </div>
         <div v-html="result"></div>
+
+        <!-- P.64 mouse位置を取得して、マウス位置を可視化する。 -->
         <div id="main" v-on:mousemove="onmousemove">
             screen: {{ screenX }} / {{ screenY }}<br />
             page: {{ pageX }} / {{ pageY }}<br />
             client: {{ clientX }} / {{ clientY }}<br />
             offset: {{ offsetX }} / {{ offsetY }}<br />
+        </div>
+        <!-- P.65 イベントハンドラーに任意の引数を渡す。 -->
+        <div>
+            <button v-on:click="onclick65('ようこそ'), $event">クリック</button>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
