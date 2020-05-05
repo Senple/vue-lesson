@@ -19,6 +19,8 @@ let app = new Vue({
         agree: true,
         // P.79 バインドの動作オプションを設定する。
         temperature: 0,
+        // P.87 制御関連のディレクティブ
+        pay: "credit",
     },
     methods: {
         onclick: function () {

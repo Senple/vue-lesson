@@ -51,7 +51,24 @@
             <label for="temperature">サウナの温度</label>
             <input type="text" id="temperature" v-model.number="temperature" v-on:change="onchange79" />
         </form>
-
+        <!-- P.87 制御関連のディレクティブ -->
+        <fieldset>
+            <legend>支払い方法</legend>
+            クレジットカード
+            <input type="radio" name="pay" value="credit" v-model="pay" />
+            銀行振り込み
+            <input type="radio" name="pay" value="bank" v-model="pay" />
+            <hr />
+            <!-- 支払い方法に応じて、入力ボックスを切り替え -->
+            <div v-if="pay === 'credit'">
+                カード番号：
+                <input type="text" key="credit" />
+            </div>
+            <div v-else-if="pay === 'bank'">
+                口座番号：
+                <input type="text" key="bank" />
+            </div>
+        </fieldset>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     </script>
