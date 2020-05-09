@@ -1,7 +1,17 @@
-// P.151 コンポーネント間の値の受け渡し
+// P.155 プロパティ値の型を制限する。
 Vue.component('my-hello', {
     // プロパティを定義
-    props: ['yourName'],
+    props: {
+        yourName: {
+            type: String,
+            required: true,
+            // P.157 文字数を制限する
+            // dev-tool のconsole部分に表示される。
+            validator: function (value) {
+                return value.length <= 5;
+            }
+        }
+    },
     template: '<div>こんにちは、{{ yourName }} さん !</div>',
 });
 
