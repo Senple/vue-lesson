@@ -3,7 +3,6 @@ Vue.component('my-hello', {
     // プロパティを定義
     props: ['yourName'],
     template: '<div>こんにちは、{{ yourName }} さん !</div>',
-
 });
 
 // P.152 プロパティで受け取った値を更新する
@@ -24,6 +23,12 @@ Vue.component('my-counter', {
             this.current++;
         }
     }
+});
+
+// P.153 非props属性の値を渡す。
+Vue.component('my-result', {
+    template: '<div title="result" class="main">こんにちは、Vue.js !</div>',
+
 });
 
 new Vue({
