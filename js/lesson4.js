@@ -38,9 +38,29 @@ Vue.component('my-counter', {
 // P.153 非props属性の値を渡す。
 Vue.component('my-result', {
     template: '<div title="result" class="main">こんにちは、Vue.js !</div>',
+});
 
+// P.158 カスタムイベント(emit)で値を更新する
+Vue.component('my-emit', {
+    props: ['step'],
+    template: '<button type="button" v-on:click="onclick">{{ step }} </button>',
+    methods: {
+        // クリック時にplusイベントを発生
+        onclick: function () {
+            this.$emit('plus', Number(this.step));
+        }
+    }
 });
 
 new Vue({
     el: "#app",
+    data: {
+        emitCurrent: 0
+    },
+    methods: {
+        // plusイベントでカウンター値を更新
+        onplus: function (e) {
+            this.emitCurrent += e;
+        }
+    }
 });

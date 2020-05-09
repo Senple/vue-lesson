@@ -19,6 +19,13 @@
         <!-- component一つ一つは、vue dev-toolでみると、rootの下位要素となっている。 -->
         <my-result title="input" my-attr="mytext" class="sub"></my-result>
 
+        <!-- P.158 カスタムイベント(emit)で値を更新する -->
+        <p>現在値：{{ emitCurrent }}</p>
+        <!-- 増分の異なるボタンを配置 -->
+        <my-emit step="1" v-on:plus="onplus"></my-emit>
+        <my-emit step="2" v-on:plus="onplus"></my-emit>
+        <my-emit step="-1" v-on:plus="onplus"></my-emit>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="js/lesson4.js"></script>
