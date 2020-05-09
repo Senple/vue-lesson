@@ -1,8 +1,0 @@
-/* P.122 v-cloakにより、画面のチラつきを非表示にする。 */
-[v-cloak] {
-    display: none;
-}
-
-#bluefont {
-    color:blue; 
-}
