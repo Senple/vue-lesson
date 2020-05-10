@@ -9,13 +9,14 @@
 
 <body>
     <div id="app">
-        <!-- P.210 リストトランジション -->
+        <!-- P.213 v-moveによるソート時のアニメーション -->
         <div id="list">
             <form>
                 <label for="todo">やること：</label>
                 <input id="todo" type="text" size="40" v-model="todo" /><br />
                 <input type="button" value="追加" v-on:click="onadd" />
                 <input type="button" value="削除" v-on:click="onremove" />
+                <input type="button" value="ソート" v-on:click="onsort" />
             </form>
             <transition-group tag="ul">
                 <li v-for="item in items" v-bind:key="item"> {{ item }} </li>

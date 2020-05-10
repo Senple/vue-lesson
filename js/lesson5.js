@@ -1,4 +1,4 @@
-// P.210 リストトランジション
+// P.213 v-moveによるソート時のアニメーション
 new Vue({
     el: "#app",
     data: {
@@ -24,5 +24,8 @@ new Vue({
             });
             this.todo = '';
         },
+        onsort: function () {
+            this.items.sort();
+        }
     }
 });
