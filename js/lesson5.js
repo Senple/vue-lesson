@@ -53,18 +53,13 @@ Vue.component('tab-env', {
     </div>`
 });
 
-// P.188 v-modelでの紐付け先を変更する.
+// P.189 複数のプロパティを双方向バインディングする。
 Vue.component('my-input', {
-    props: ['name'],
-    // 紐付け先をnameプロパティ/changeイベントに変更する。
-    model: {
-        prop: 'name',
-        event: 'change'
-    },
+    props: ['value'],
     template: `<label> \
     名前： \
-    <input type="text" v-bind:value="name" \
-    v-on:input="$emit('change', $event.target.value)" /> \
+    <input type="text" v-bind:value="value" \
+    v-on:input="$emit('update:value', $event.target.value)" /> \
     </label>`
 });
 

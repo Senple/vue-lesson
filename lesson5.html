@@ -12,25 +12,23 @@
         <!-- P.178 動的コンポーネントの基本 -->
         <!-- <component v-bind:is="currentBanner"></component> -->
         <!-- P.181 タブパネルを生成する。 -->
-        <div id="container">
-            <!-- タブを列挙 -->
+        <!-- <div id="container">
+            タブを列挙
             <ul>
                 <li v-for="tab in tabNames">
                     <a href="#" v-on:click.prepend="onclick(tab)">{{ tabs[tab] }}</a>
                 </li>
             </ul>
-            <!-- タブパネルを準備する -->
+            タブパネルを準備する
             <keep-alive>
-                <!-- keep-alive属性があると、以前のタブ内の状態を保存しておくことができる。 -->
+                keep-alive属性があると、以前のタブ内の状態を保存しておくことができる。
                 <component v-bind:is="currentTab"></component>
             </keep-alive>
-        </div>
+        </div> -->
 
-        <!-- P.185 コンポーネントでのv-modelの利用例 -->
-        <my-input v-model="message"></my-input>
-        <p>入力値：{{ message }} </p>
-
-        <!-- P.188 v-modelでの紐付け先を変更する. -->
+        <!-- P.189 複数のプロパティを双方向バインディングする。 -->
+        <my-input v-bind:value.sync="message"></my-input>
+        <p>入力値：{{ message }}</p>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
