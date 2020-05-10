@@ -1,6 +1,6 @@
- /* P.210 リストトランジション  */
+ /* P.213 v-moveによるソート時のアニメーション  */
  /* 追加/削除時にTransitionを適用する */
- .v-enter-active, .v-leave-active {
+ .v-enter-active, .v-leave-active, .v-move{
      transition: transform 1s;
  }
 
@@ -8,4 +8,7 @@
  .v-enter, .v-leave-to {
      transform: translateX(80%);
  }
- 
+
+ .v-leave-active{
+     position: absolute;
+ }
