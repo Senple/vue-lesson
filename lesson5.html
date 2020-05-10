@@ -21,6 +21,7 @@
             </ul>
             <!-- タブパネルを準備する -->
             <keep-alive>
+                <!-- keep-alive属性があると、以前のタブ内の状態を保存しておくことができる。 -->
                 <component v-bind:is="currentTab"></component>
             </keep-alive>
         </div>
