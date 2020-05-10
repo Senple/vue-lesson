@@ -1,4 +1,4 @@
-/* P.196 フェードイン/フェードアウトの実装 */
+/* P.196 フェードイン/フェードアウトの実装 補足*/
 #panel {
     border: 1px solid #000;
     width:358px;
@@ -10,18 +10,10 @@
 }
 
 /* アニメーション前後のスタイルを設定 */
-.v-enter {
+.v-enter, .v-leave-to {
     opacity:0.0;
 }
 
-.v-enter-to {
+.v-enter-to, .v-leave {
     opacity:1.0;
-}
-
-.v-leave {
-    opacity:1.0;
-}
-
-.v-leave-to {
-    opacity:0.0;
 }
