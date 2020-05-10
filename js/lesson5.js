@@ -53,6 +53,16 @@ Vue.component('tab-env', {
     </div>`
 });
 
+// P.185 コンポーネントでのv-modelの利用例
+Vue.component('my-input', {
+    props: ['value'],
+    template: `<label> \
+    名前： \
+    <input type="text" v-bind:value="value" \
+    v-on:input="$emit('input', $event.target.value)" /> \
+    </label>`
+});
+
 new Vue({
     el: "#app",
     methods: {
@@ -72,6 +82,7 @@ new Vue({
         }
     },
     data: {
+        message: "",
         // 表示中のタブ
         current: 'member',
         // 表示するタブのリスト
