@@ -1,14 +1,11 @@
- /* P.205 複数のアニメーションを同居させる  */
- #panel {
-    border: 1px solid #000;
-    width: 350px;
-    overflow: hidden;
-  }
-  
-  .panel-enter-active, .panel-leave-active {
-    transition: opacity 5s;
-  }
-  
-  .panel-enter, .panel-leave-to {
-    opacity: 0.0;
-  }
+ /* P.210 リストトランジション  */
+ /* 追加/削除時にTransitionを適用する */
+ .v-enter-active, .v-leave-active {
+     transition: transform 1s;
+ }
+
+ /* 追加前/削除後の位置を宣言する */
+ .v-enter, .v-leave-to {
+     transform: translateX(80%);
+ }
+ 
