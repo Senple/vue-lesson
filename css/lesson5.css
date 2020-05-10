@@ -1,19 +1,14 @@
- /* P.201 key属性をトリガーとしたアニメーション */
- .panel {
+ /* P.205 複数のアニメーションを同居させる  */
+ #panel {
     border: 1px solid #000;
-    width:350px;
-    overflow:hidden;
-}
-
-/* アニメーション全体の設定 */
-.v-enter-active, .v-leave-active {
+    width: 350px;
+    overflow: hidden;
+  }
+  
+  .panel-enter-active, .panel-leave-active {
     transition: opacity 5s;
-}
-
-.v-leave-active {
-    position: absolute;
-}
-
-.v-enter, .v-leave-to {
+  }
+  
+  .panel-enter, .panel-leave-to {
     opacity: 0.0;
-}
+  }

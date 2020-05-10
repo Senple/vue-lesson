@@ -9,13 +9,13 @@
 
 <body>
     <div id="app">
-        <!-- P.201 key属性をトリガーとしたアニメーション -->
-        <input type="button" value="切り替え" v-on:click="onclick" />
-        <!-- idプロパティをkey属性にバインドする -->
-        <!-- ゆっくりと画像が変わる -->
-        <transition>
-            <div class="panel" v-bind:key="id">
-                {{ panels[id] }}
+        <!-- P.205 複数のアニメーションを同居させる -->
+        <input type="button" value="表示／非表示" v-on:click="onclick" />
+        <transition mode="out-in" name="panel">
+            <div id="panel" v-show="flag">
+                WINGSプロジェクトで一緒に執筆の仕事をしてみませんか？<br />
+                ただいまメンバー募集中！<br />
+                是非、ご応募ください。
             </div>
         </transition>
     </div>
