@@ -9,15 +9,13 @@
 
 <body>
     <div id="app">
-        <!-- P.200 アニメーションの制御 複数の要素-->
-        <input type="button" value="表示/非表示" v-on:click="onclick" />
-        <!-- アニメーションの対象領域 -->
+        <!-- P.201 key属性をトリガーとしたアニメーション -->
+        <input type="button" value="切り替え" v-on:click="onclick" />
+        <!-- idプロパティをkey属性にバインドする -->
+        <!-- ゆっくりと画像が変わる -->
         <transition>
-            <div id="panel" v-if="flag" key="p1">
-                WINGSプロジェクトで一緒に。。。
-            </div>
-            <div id="empty" v-else key="p2">
-                パネルは非表示です。
+            <div class="panel" v-bind:key="id">
+                {{ panels[id] }}
             </div>
         </transition>
     </div>
