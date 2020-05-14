@@ -16,6 +16,7 @@ Vue.directive('highlight', {
         // once修飾子でupdate更新はスキップ
         if (binding.modifiers.once) {
             hook(el, binding)
+            // elは、<span border-color:"red"; border-style:"solid";>メンバー募集中！</span>
         }
     }
 });
