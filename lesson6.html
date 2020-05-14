@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8" />
@@ -8,12 +8,21 @@
 </head>
 
 <body>
+    <!-- P.238 markedライブラリをラップする。-->
     <div id="app">
-        <!-- P.234 引数付きのディレクティブを定義する。 -->
-        <p>WINGSプロジェクトで一緒に執筆してみませんか？
-            <span v-highlight:text="color">メンバー募集中！</span>
-            是非、ご応募ください。</p>
+        <div id="editor" v-markdown="options">
+            ### WINGSプロジェクト
+            ただいま**メンバー募集中**です。
+
+            既存メンバーは、SE、~医師~、主婦など様々です。
+            主なお仕事は以下の通り。
+
+            + 書籍の執筆
+            + 雑誌記事の執筆
+            + Web記事の執筆
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="js/lesson6.js"></script>
 </body>
