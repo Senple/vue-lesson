@@ -1,31 +1,15 @@
-// // P.238 markedライブラリをラップする。
-// Vue.directive('markdown', function (el, binding, vnode, oldVnode) {
-//     // markdown文字列をHTML文字列に変換する。
-//     el.innerHTML = marked(el.textContent, binding.value);
-// });
-
-// new Vue({
-//     el: '#app',
-//     data: {
-//         options: {
-//             gfm: true,
-//             breaks: true,
-//             xhtml: true,
-//         }
-//     },
-// });
-
-Vue.directive('markdown', function (el, binding, vnode, oldVnode) {
-    el.innerHTML = marked(el.textContent, binding.value);
+// P.240 フィルターの自作。
+// trimフィルターを宣言。
+Vue.filter('trim', function (value) {
+    if (typeof value !== "string") {
+        return value;
+    }
+    return value.trim();
 });
 
 new Vue({
     el: '#app',
     data: {
-        options: {
-            gfm: true,
-            breaks: true,
-            xhtml: true,
-        }
+        str: 'WINGS プロジェクト'
     },
 });

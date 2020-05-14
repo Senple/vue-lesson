@@ -8,19 +8,9 @@
 </head>
 
 <body>
-    <!-- P.238 markedライブラリをラップする。-->
+    <!-- P.240 フィルターの自作。-->
     <div id="app">
-        <div id="editor" v-markdown="options">
-            ### WINGSプロジェクト
-            ただいま**メンバー募集中**です。
-
-            既存メンバーは、SE、~医師~、主婦など様々です。
-            主なお仕事は以下の通り。
-
-            + 書籍の執筆
-            + 雑誌記事の執筆
-            + Web記事の執筆
-        </div>
+        <div v-bind:title="str | trim">str: 「{{ str | trim }}」</div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
