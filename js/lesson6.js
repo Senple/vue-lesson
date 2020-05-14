@@ -1,19 +1,15 @@
-// P.228 属性値の変化を検出する。
-Vue.directive('highlight', {
-    // 紐づいた時の処理（初回だけ)
-    bind: function (el, binding, vnode, oldVnode) {
-        el.style.backgroundColor = binding.value;
-    },
-    // 上位コンポーネントが変化した時
-    update: function (el, binding, vnode, oldVnode) {
-        el.style.backgroundColor = binding.value;
-    }
+// P.230 値の変化をより厳密に検知する。
+Vue.directive('highlight', function (el, binding, vnode, oldVnode) {
+    // 現在の属性値をログ出力
+    console.log(binding.value);
+    el.style.backgroundColor = binding.value;
 
-})
+});
 
 new Vue({
     el: '#app',
     data: {
+        name: "アルバス・ダンブルドア",
         color: 'yellow'
     }
 })
