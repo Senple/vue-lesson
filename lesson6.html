@@ -9,14 +9,9 @@
 
 <body>
     <div id="app">
-        <!-- P.233 修飾子付きのディレクティブを定義する。 -->
-        <select v-model="color">
-            <option value="yellow">黄色</option>
-            <option value="red">赤色</option>
-            <option value="blue">青色</option>
-        </select>
+        <!-- P.234 引数付きのディレクティブを定義する。 -->
         <p>WINGSプロジェクトで一緒に執筆してみませんか？
-            <span v-highlight.border.once="color">メンバー募集中！</span>
+            <span v-highlight:text="color">メンバー募集中！</span>
             是非、ご応募ください。</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
